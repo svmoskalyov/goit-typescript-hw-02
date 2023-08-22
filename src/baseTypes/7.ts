@@ -3,13 +3,18 @@
   і повертає boolean значення, що вказує, чи це день робочий чи вихідний.
 */
 
-enum Weekend {
-  Sat = "Sat",
-  Sun= "Sun",
+enum DayOfWeek {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday
 }
 
-function isWeekend(day: string): boolean {
-  if ( Weekend.Sat === day || Weekend.Sun === day  ) {
+function isWeekend(day: DayOfWeek): boolean {
+  if ( day === DayOfWeek.Saturday || day === DayOfWeek.Sunday ) {
     return true
   }
   
